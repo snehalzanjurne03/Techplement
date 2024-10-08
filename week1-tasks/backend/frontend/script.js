@@ -2,11 +2,11 @@ $(document).ready(function() {
     // Get a random quote
     $('#getQuote').on('click', function() {
         $.ajax({
-            url: 'http://localhost:3000/api/quotes/random', // API endpoint
+            url: 'http://localhost:3000/api/quotes/random', 
             method: 'GET',
             success: function(data) {
-                $('#quote').text(data.quote); // Display quote
-                $('#author').text('- ' + data.author); // Display author
+                $('#quote').text(data.quote); 
+                $('#author').text('- ' + data.author); 
             },
             error: function() {
                 alert('Error retrieving quote. Please try again.');
@@ -14,20 +14,20 @@ $(document).ready(function() {
         });
     });
 
-    // Search for quotes by author
+    
     $('#searchQuote').on('click', function() {
-        const authorName = $('#authorName').val(); // Get the author name from input
+        const authorName = $('#authorName').val(); 
         if (!authorName) {
             alert('Please enter an author name');
-            return; // Exit if input is empty
+            return; 
         }
 
         $.ajax({
-            url: `http://localhost:3000/api/quotes?author=${encodeURIComponent(authorName)}`, // API endpoint with query parameter
+            url: `http://localhost:3000/api/quotes?author=${encodeURIComponent(authorName)}`, 
             method: 'GET',
             success: function(data) {
                 if (data.length > 0) {
-                    // Display the first matching quote
+                    
                     $('#quote').text(data[0].quote);
                     $('#author').text('- ' + data[0].author);
                 } else {
@@ -46,17 +46,17 @@ $(document).ready(function() {
 
 //
 $('#getQuote').on('click', function() {
-    $('#loading').show(); // Show loading
+    $('#loading').show();
     $.ajax({
         url: 'http://localhost:3000/api/quotes/random',
         method: 'GET',
         success: function(data) {
-            $('#loading').hide(); // Hide loading
+            $('#loading').hide(); 
             $('#quote').text(data.quote);
             $('#author').text('- ' + data.author);
         },
         error: function() {
-            $('#loading').hide(); // Hide loading
+            $('#loading').hide(); 
             alert('Error retrieving quote. Please try again.');
         }
     });
@@ -64,7 +64,7 @@ $('#getQuote').on('click', function() {
 
 
 
-//
+
 let debounceTimeout;
 
 $(document).ready(function() {
@@ -83,17 +83,16 @@ $(document).ready(function() {
     });
 
     $('#searchInput').on('input', function() {
-        clearTimeout(debounceTimeout); // Clear the previous timeout
+        clearTimeout(debounceTimeout); 
         debounceTimeout = setTimeout(() => {
-            const author = $(this).val(); // Get input value
+            const author = $(this).val();
             if (author) {
                 $.ajax({
                     url: `http://localhost:3000/api/quotes?author=${author}`,
                     method: 'GET',
                     success: function(data) {
-                        // Handle displaying search results
-                        // For example, show results below the search box
-                        $('#searchResults').empty(); // Clear previous results
+                        
+                        $('#searchResults').empty(); 
                         if (data.length > 0) {
                             data.forEach(quote => {
                                 $('#searchResults').append(`<div>${quote.quote} - ${quote.author}</div>`);
@@ -107,8 +106,8 @@ $(document).ready(function() {
                     }
                 });
             } else {
-                $('#searchResults').empty(); // Clear results if input is empty
+                $('#searchResults').empty(); 
             }
-        }, 300); // Adjust the delay as needed
+        }, 300); 
     });
 });
