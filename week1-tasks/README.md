@@ -9,7 +9,6 @@ This project displays a random quote of the day and allows users to search for q
 - JavaScript
 - Node.js
 - Express
-- SQL
 
 ## How to Run the Project
 1. Clone the repository.
