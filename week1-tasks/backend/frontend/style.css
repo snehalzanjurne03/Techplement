@@ -1,9 +1,9 @@
-/* General Styling */
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto Slab', serif; /* Elegant Google Font */
-    background: linear-gradient(to right, #fbc2eb, #a18cd1); /* Soft pastel gradient */
+    font-family: 'Roboto Slab', serif; 
+    background: linear-gradient(to right, #fbc2eb, #a18cd1); 
     color: #333;
     display: flex;
     justify-content: center;
@@ -11,7 +11,6 @@ body {
     height: 100vh;
 }
 
-/* Container for Quote */
 #quoteContainer {
     background-color: #fff;
     padding: 40px;
@@ -25,11 +24,11 @@ body {
 }
 
 #quoteContainer:hover {
-    transform: rotateY(10deg) rotateX(5deg); /* 3D rotation effect */
+    transform: rotateY(10deg) rotateX(5deg); 
     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
 }
 
-/* Headings */
+
 h1 {
     color: #555;
     font-size: 2.2rem;
@@ -37,7 +36,7 @@ h1 {
     font-weight: 600;
 }
 
-/* Quote Styling */
+
 #quote {
     font-size: 1.7rem;
     color: #444;
@@ -52,9 +51,9 @@ h1 {
     margin-top: 10px;
 }
 
-/* Button Styling */
+
 button, #searchQuote {
-    background-color: #a18cd1; /* Same as button color */
+    background-color: #a18cd1; 
     color: white;
     border: none;
     padding: 12px 30px;
@@ -65,43 +64,43 @@ button, #searchQuote {
     transition: background-color 0.4s ease, transform 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-top: 10px; /* Space above button */
+    margin-top: 10px;
 }
 
 button:hover, #searchQuote:hover {
-    background-color: #fbc2eb; /* Change button color on hover */
-    transform: scale(1.1) rotate(2deg); /* Add slight rotation and zoom on hover */
+    background-color: #fbc2eb;
+    transform: scale(1.1) rotate(2deg); 
 }
 
 button:active, #searchQuote:active {
-    transform: scale(1) rotate(0deg); /* Reset transformation on click */
+    transform: scale(1) rotate(0deg); 
 }
 
-/* Input Styling */
+
 #authorName {
     padding: 10px;
-    border: 2px solid #a18cd1; /* Border color matching the button */
+    border: 2px solid #a18cd1; 
     border-radius: 5px;
-    width: 100%; /* Full width */
-    margin-top: 15px; /* Space above input */
-    font-size: 1rem; /* Font size */
-    transition: border-color 0.3s ease; /* Smooth border color transition */
+    width: 100%; 
+    margin-top: 15px;  
+    font-size: 1rem;  
+    transition: border-color 0.3s ease;  
 }
 
 #authorName:focus {
-    border-color: #fbc2eb; /* Change border color on focus */
-    outline: none; /* Remove default outline */
+    border-color: #fbc2eb;  
+    outline: none;
 }
 
-/* Loading Indicator */
+ 
 #loading {
-    margin-top: 20px; /* Space above the loading text */
-    font-size: 1.5rem; /* Increase font size */
-    color: #555; /* Change text color */
-    text-align: center; /* Center the loading text */
+    margin-top: 20px;  
+    font-size: 1.5rem;  
+    color: #555;  
+    text-align: center;  
 }
 
-/* Responsive Design */
+ 
 @media (max-width: 600px) {
     #quoteContainer {
         width: 90%;
