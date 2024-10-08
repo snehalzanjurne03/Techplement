@@ -1,0 +1,99 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif; /* Elegant Google Font */
+    background: linear-gradient(to right, #fbc2eb, #a18cd1); /* Soft pastel gradient */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for Quote */
+#quoteContainer {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+#quoteContainer:hover {
+    transform: rotateY(10deg) rotateX(5deg); /* 3D rotation effect */
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+}
+
+/* Headings */
+h1 {
+    color: #555;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Quote Styling */
+#quote {
+    font-size: 1.7rem;
+    color: #444;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+#author {
+    font-size: 1.3rem;
+    color: #666;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Button Styling */
+button {
+    background-color: #a18cd1;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color: #fbc2eb;
+    transform: scale(1.1) rotate(2deg); /* Add slight rotation and zoom on hover */
+}
+
+button:active {
+    transform: scale(1) rotate(0deg); /* Reset transformation on click */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #quoteContainer {
+        width: 90%;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #quote {
+        font-size: 1.4rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
