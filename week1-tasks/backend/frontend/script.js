@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    // Get a random quote
+
     $('#getQuote').on('click', function() {
         $.ajax({
             url: 'http://localhost:3000/api/quotes/random', 
