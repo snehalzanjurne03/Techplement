@@ -8,7 +8,9 @@ This project displays a random quote of the day and allows users to search for q
 - CSS
 - JavaScript
 - Node.js
-- Express
+- Express.js
+- JQuery
+- JSON
 
 ## How to Run the Project
 1. Clone the repository.
