@@ -21,7 +21,6 @@ body {
     max-width: 600px;
     text-align: center;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
-    transform-style: preserve-3d;
     perspective: 1000px;
 }
 
@@ -54,8 +53,8 @@ h1 {
 }
 
 /* Button Styling */
-button {
-    background-color: #a18cd1;
+button, #searchQuote {
+    background-color: #a18cd1; /* Same as button color */
     color: white;
     border: none;
     padding: 12px 30px;
@@ -66,15 +65,40 @@ button {
     transition: background-color 0.4s ease, transform 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-top: 10px; /* Space above button */
 }
 
-button:hover {
-    background-color: #fbc2eb;
+button:hover, #searchQuote:hover {
+    background-color: #fbc2eb; /* Change button color on hover */
     transform: scale(1.1) rotate(2deg); /* Add slight rotation and zoom on hover */
 }
 
-button:active {
+button:active, #searchQuote:active {
     transform: scale(1) rotate(0deg); /* Reset transformation on click */
+}
+
+/* Input Styling */
+#authorName {
+    padding: 10px;
+    border: 2px solid #a18cd1; /* Border color matching the button */
+    border-radius: 5px;
+    width: 100%; /* Full width */
+    margin-top: 15px; /* Space above input */
+    font-size: 1rem; /* Font size */
+    transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+#authorName:focus {
+    border-color: #fbc2eb; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Loading Indicator */
+#loading {
+    margin-top: 20px; /* Space above the loading text */
+    font-size: 1.5rem; /* Increase font size */
+    color: #555; /* Change text color */
+    text-align: center; /* Center the loading text */
 }
 
 /* Responsive Design */
@@ -92,7 +116,7 @@ button:active {
         font-size: 1.4rem;
     }
 
-    button {
+    button, #searchQuote {
         font-size: 1rem;
         padding: 10px 20px;
     }
