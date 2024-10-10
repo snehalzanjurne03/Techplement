@@ -1,9 +1,8 @@
-
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto Slab', serif; 
-    background: linear-gradient(to right, #fbc2eb, #a18cd1); 
+    font-family: 'Roboto Slab', serif;
+    background: linear-gradient(to right, #d3d3d3, #748ca3);
     color: #333;
     display: flex;
     justify-content: center;
@@ -12,111 +11,90 @@ body {
 }
 
 #quoteContainer {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    width: 80%;
-    max-width: 600px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 40%; 
+    max-width: 350px; 
     text-align: center;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    perspective: 1000px;
+    transition: 0.3s ease;
 }
 
 #quoteContainer:hover {
-    transform: rotateY(10deg) rotateX(5deg); 
-    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
+h1, #quote, #author {
+    margin-bottom: 15px;
+}
 
 h1 {
-    color: #555;
-    font-size: 2.2rem;
-    margin-bottom: 25px;
+    color: #2c3e50;
+    font-size: 1.6rem; 
     font-weight: 600;
 }
 
-
 #quote {
-    font-size: 1.7rem;
-    color: #444;
-    font-weight: 500;
-    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #5d6d7e;
 }
 
 #author {
-    font-size: 1.3rem;
-    color: #666;
+    font-size: 1rem;
+    color: #839192;
     font-style: italic;
-    margin-top: 10px;
 }
 
-
 button, #searchQuote {
-    background-color: #a18cd1; 
-    color: white;
+    background: #566573;
+    color: #fff;
     border: none;
-    padding: 12px 30px;
-    font-size: 1.1rem;
-    border-radius: 30px;
+    padding: 8px 20px; 
+    font-size: 0.9rem;
+    border-radius: 20px;
     cursor: pointer;
-    outline: none;
-    transition: background-color 0.4s ease, transform 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    transition: 0.3s;
     margin-top: 10px;
 }
 
 button:hover, #searchQuote:hover {
-    background-color: #fbc2eb;
-    transform: scale(1.1) rotate(2deg); 
+    background: #85c1e9;
+    transform: scale(1.05);
 }
-
-button:active, #searchQuote:active {
-    transform: scale(1) rotate(0deg); 
-}
-
 
 #authorName {
-    padding: 10px;
-    border: 2px solid #a18cd1; 
-    border-radius: 5px;
-    width: 100%; 
-    margin-top: 15px;  
-    font-size: 1rem;  
-    transition: border-color 0.3s ease;  
+    padding: 8px;
+    border: 2px solid #566573;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
 }
 
 #authorName:focus {
-    border-color: #fbc2eb;  
-    outline: none;
+    border-color: #85c1e9;
 }
 
- 
 #loading {
-    margin-top: 20px;  
-    font-size: 1.5rem;  
-    color: #555;  
-    text-align: center;  
+    margin-top: 15px;
+    font-size: 1.2rem; 
+    color: #5d6d7e;
 }
 
- 
 @media (max-width: 600px) {
     #quoteContainer {
-        width: 90%;
-        padding: 30px;
+        width: 75%;
+        padding: 15px;
     }
 
     h1 {
-        font-size: 1.8rem;
-    }
-
-    #quote {
         font-size: 1.4rem;
     }
 
-    button, #searchQuote {
-        font-size: 1rem;
-        padding: 10px 20px;
+    button {
+        font-size: 0.8rem;
     }
 }
